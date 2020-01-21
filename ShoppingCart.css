@@ -1,0 +1,17 @@
+#electronicsSelect{
+    margin-left: 10px;
+}
+#bookSelect{
+    margin-left: 200px;
+}
+#product{
+    padding-top: 10px;
+}
+#myinput{
+    margin-top: 20px;
+}
+@media only screen and (max-width: 1024px){
+    #myinput{
+        width: 100%;
+    }
+}
