@@ -1,63 +1,79 @@
+
+var temp;  //global variable
 $(document).ready(function () {
-    showDetails();
-    $('#navbarDropdown').click(function () {
-        $('#product').empty();
-        getDropdownboxValue('electronics');
-        /*$('#showelectronic a').mouseenter(function(){
-           alert($(this));
-        });*/
 
-    });
-    $('#navbarDropdown1').click(function () {
-        $('#product').empty();
-        getDropdownboxValue('books');
+    $.getJSON("sample-data.json", function (obj)    //load json data from file sample-data.json
 
-    });
-
-    $('#navbarDropdown1').mouseenter(function () {
-        $('#showbook').toggle('medium');
-        $('#showelectronic').hide();
-    });
-    $('#navbarDropdown').mouseenter(function () {
-        $('#showelectronic').toggle('medium');
-        $('#showbook').hide();
-    });
-    function getDropdownboxValue(data) {
-        $.getJSON("sample-data.json", function (obj) {
-            console.log(obj);
-            $.each(obj, function (key, value) {
-
-                if (value.type == data) {
-                    // console.log(key + " " + value.id);
-
-                    $('#product').append(`<div class="col-3 text-center pt-3">
-                    <img src="${value.imgPath}" style="width: 200px; height: 250px;">
-        <p>${value.name}</p>
-        <p>${value.price}</p>
-
-</div>`);
-                }
-
-            });
-        });
-    }
-
-});
-
-function showDetails() {
-    $.getJSON("sample-data.json", function (obj) {
-        console.log(obj);
+    {
+        temp = obj;
         $.each(obj, function (key, value) {
 
+
             if (value.rating >= 4) {
-                $('#product').append(`<div class="col-3 pt-3">
+                $('#product').append(`<div class="col-md-3 col-sm-6 text-center pt-3">
                     <img src="${value.imgPath}" style="width: 200px; height: 250px;">
-        <p>${value.name}</p>
-        <p><i class="fa fa-rupee"></i>${value.price}</p>
+        <ul type="none">
+        <li>${value.name}</li>
+        <li><i class="fa fa-rupee"></i>${value.price}</li>
+         <li><button class="btn btn-success" style="margin-top: 4px;">${value.rating}<i class="fa fa-star-o" style="color: white"></i></button></li>
+            </ul>
 </div>`);
             }
 
         });
+    });   // end of getJSON() function
+
+
+
+    $('#electronic').click(function () {
+        $('#product').empty();
+        showjsondata('electronics'); //calling showjsondata function
+
     });
 
-}
+
+
+    $('#books').click(function () {
+        $('#product').empty();
+        showjsondata('books');  // calling showjsondata function
+
+    });
+
+
+
+    $('#books').mouseenter(function () {
+        $('#showbook').toggle('medium');
+        $('#showelectronic').hide();
+    });
+
+
+    $('#electronic').mouseenter(function () {
+        $('#showelectronic').toggle('medium');
+        $('#showbook').hide();
+    });
+
+
+
+});//end of ready function
+
+
+function showjsondata(data) {
+
+    $.each(temp, function (key, value) {
+
+        if (value.type == data) {
+
+            $('#product').append(`<div class="col-md-3 col-sm-6 text-center pt-3">
+                    <img src="${value.imgPath}" style="width: 200px; height: 250px;">
+        <ul type="none">
+        <li>${value.name}</li>
+        <li><i class="fa fa-rupee"></i>${value.price}</li>
+            <li><button class="btn btn-success" style="margin-top: 4px;">${value.rating}<i class="fa fa-star-o" style="color: white"></i></button></li>
+            </ul>
+</div>`);
+        }
+
+    }); //end of $.each loop
+
+}  // end of showjsondata function
+
