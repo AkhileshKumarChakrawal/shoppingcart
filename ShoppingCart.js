@@ -57,7 +57,7 @@ $(document).ready(function () {
 });//end of ready function
 
 
-function showjsondata(data) {
+function showjsondata(data) {  //  function used to display product
 
     $.each(temp, function (key, value) {
 
@@ -69,6 +69,8 @@ function showjsondata(data) {
         <li>${value.name}</li>
         <li><i class="fa fa-rupee"></i>${value.price}</li>
             <li><button class="btn btn-success" style="margin-top: 4px;">${value.rating}<i class="fa fa-star-o" style="color: white"></i></button></li>
+            <!--<li class="jstars" data-value='4.5'data-total-stars="5" data-color="#22D118" data-empty-color="black"></li>
+-->
             </ul>
 </div>`);
         }
