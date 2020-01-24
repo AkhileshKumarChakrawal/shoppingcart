@@ -23,7 +23,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="electronic" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link dropdown-toggle text-white font-weight-bold" href="#" id="electronic" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Electronic
                 </a>
                 <div class="dropdown-menu" aria-labelledby="electronic" id="showelectronic">
@@ -33,7 +33,7 @@
                 </div>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="books" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link dropdown-toggle text-white font-weight-bold" href="#" id="books" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Books
                 </a>
                 <div class="dropdown-menu" aria-labelledby="books" id="showbook">
@@ -43,7 +43,7 @@
                 </div>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link dropdown-toggle text-white font-weight-bold" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Homes & Furiture
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown2" id="homefurniture">
@@ -62,14 +62,31 @@
         <div class="dropdown-divider"></div>
     </div>
 
-    <div class="row text-center" id="product1">
-        <div class="col-6" id="imgsection">
-            <div id="image"></div>
-            <div id="offer"></div>
+    <div class="row" id="product1">
+        <div class="col-md-6 col-sm-12 text-center sticky-top" id="imgsection">
+            <div class="check" id="image"></div>
+            <div class="row check" id="btnsec">
+                <div class="col-6">
+                    <button type="button" class="btn btn-danger btn-lg btn-block mt-3"><i class="fa fa-shopping-cart" style="color: white"></i> ADD TO CART</button>
+                </div>
+                <div class="col-6">
+                    <button type="button" class="btn btn-warning btn-lg btn-block mt-3 text-white"><i class="fa fa-bolt" style="color: white"></i> BUY NOW</button>
+                </div>
+            </div>
         </div>
-        <div class="col-6" id="datasection">
+        <div class="col-md-6 col-sm-12" id="datasection">
+
             <div id="data1"></div>
-            <div id="commentssec"></div>
+            <div>
+                <h4 class="check" style="color: green">Available Offers ::</h4>
+            </div>
+            <div id="offer">
+            </div>
+            <div>
+                <h4 class="check">Comments ::</h4>
+            </div>
+            <div id="commentssec">
+            </div>
         </div>
     </div>
 </div>
