@@ -7,6 +7,7 @@
 #product{
     padding-top: 10px;
 
+
 }
 #image {
     border-style: groove;
@@ -19,9 +20,96 @@
 #myinput{
     margin-top: 20px;
 }
+#btnsec{
+    padding-left: 0;
+}
+.rateButton{
+    width: 250px;
+    height:320px;
+}
+@media screen and (min-width: 1440px) {
+    #product{
+        text-align: justify-all;
+        font-size: 18px;
+    }
+    .imgclick{
+        width: 410px;
+        height: 480px;
+    }
 
-@media only screen and (max-width: 1024px){
+}
+@media only screen and (min-width: 1024px) and (max-width: 1439px){
+    #product{
+        text-align: left;
+    }
+    .imgclick{
+        width: 360px;
+        height: 410px;
+    }
     #myinput{
-        width: 96%;
+        width: 97%;
+    }
+    #datasection{
+        padding-left: 0;
+        font-size: 15px;
+        text-align: justify-all;
+    }
+    .rateButton{
+        width: 230px;
+        height: 300px;
+        padding: 5px;
+    }
+}
+@media only screen and (min-width: 540px) and (max-width:1021px){
+    #product{
+        text-align: left;
+    }
+    .imgclick{
+        width: 300px;
+        height: 420px;
+    }
+    .check{
+        padding-left: 34px;
+    }
+    .btn_sm{
+        font-size: 15px;
+    }
+    #myinput{
+        width: 97%;
+    }
+    #datasection{
+        padding-left: 0;
+        font-size: 14px;
+        text-align: justify-all;
+    }
+    .rateButton{
+        width: 300px;
+        height: 360px;
+    }
+}
+@media only screen and (max-width: 538px){
+    .rateButton{
+        width: 300px;
+        height: 360px;
+    }
+    .imgclick{
+        width: 300px;
+        height: 340px;
+        margin-right: 10px;
+        border-style: hidden;
+    }
+    .check{
+        padding-left: 34px;
+    }
+    #myinput{
+        width: 97%;
+    }
+    .btn_sm{
+        font-size: 15px;
+    }
+    #datasection{
+        padding-left: 0;
+        font-size: 13px;
+        text-align: justify-all;
     }
 }

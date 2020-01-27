@@ -10,8 +10,8 @@ $(document).ready(function () {
 
 
             if (value.rating >= 4) {
-                $('#product').append(`<div class="col-md-3 col-sm-6 pt-3">
-                    <img src="${value.imgPath}" name="${value.id}" class="rateButton" style="width: 200px; height: 250px;">
+                $('#product').append(`<div class="col-lg-3 col-md-6 col-sm-12 pt-3">
+                    <img src="${value.imgPath}" name="${value.id}" class="rateButton">
         <ul type="none">
         <li>${value.name}</li>
         <li><i class="fa fa-rupee"></i>${value.price}</li>
@@ -78,7 +78,7 @@ $(document).ready(function () {
 
                 if (value.type == "books") {
                     $('#image').append(`
-<img src ="${value.imgPath}" style ="width : 410px; height : 510px;"></div>`);
+<img src ="${value.imgPath}" class="imgclick"></div>`);
 
                     $.each(value.offers, function (keys, vals) {
                         if (vals.amount != null) {
@@ -123,7 +123,7 @@ $(document).ready(function () {
 
                 else if(value.type == "electronics"){
                     $('#image').append(`
-<img src ="${value.imgPath}" style ="width : 340px; height : 480px;"></div>`);
+<img src ="${value.imgPath}" class="imgclick"></div>`);
 
                     $.each(value.offers, function (keys, vals) {
                         if (vals.amount != null) {
@@ -183,8 +183,8 @@ function showjsondata(data) {  //  function used to display product
 
         if (value.type == data) {
 
-            $('#product').append(`<div class="col-md-3 col-sm-6 text-center pt-3 ">
-                    <img src="${value.imgPath}" name="${value.id}" class="rateButton" style="width: 200px; height: 250px;">
+            $('#product').append(`<div class="col-lg-3 col-md-6 col-sm-12 text-center pt-3 ">
+                    <img src="${value.imgPath}" name="${value.id}" class="rateButton">
         <ul type="none">
         <li>${value.name}</li>
         <li><i class="fa fa-rupee"></i>${value.price}</li>
@@ -198,9 +198,3 @@ function showjsondata(data) {  //  function used to display product
 
 }  // end of showjsondata function
 
-Hi Team,
-    Today i worked on
-:- task(myshoppingcart) in which i worked fetching json data after image click
-:- and display all json data according to image click
-:- and applied css and responsive to image and data
-git-url : -
